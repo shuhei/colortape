@@ -2,6 +2,8 @@
 
 Colorize test results of [tape](https://github.com/substack/tape).
 
+[![NPM version](https://badge.fury.io/js/colortape.png)](http://badge.fury.io/js/colortape)
+
 ## Usage
 
 Pipe the result of `tape` command.
