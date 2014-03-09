@@ -13,6 +13,13 @@
     "tape",
     "tap"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shuhei/colortape.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shuhei/colortape/issues"
+  },
   "author": "Shuhei Kagawa <shuhei.kagawa@gmail.com>",
   "license": "BSD"
 }
