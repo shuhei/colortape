@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+var colorTape = require('../');
+
+process.stdin.pipe(colorTape()).pipe(process.stdout);

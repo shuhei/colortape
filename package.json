@@ -1,0 +1,18 @@
+{
+  "name": "colortape",
+  "version": "0.0.1",
+  "description": "Colorize test results of tape.",
+  "main": "index.js",
+  "bin": "bin/colortape",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "color",
+    "tape",
+    "tap"
+  ],
+  "author": "Shuhei Kagawa <shuhei.kagawa@gmail.com>",
+  "license": "BSD"
+}
