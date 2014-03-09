@@ -1,7 +1,7 @@
 {
   "name": "colortape",
-  "version": "0.0.2",
-  "description": "Colorize test results of tape.",
+  "version": "0.0.3",
+  "description": "Colorize test results of tape/node-tap.",
   "main": "index.js",
   "bin": "bin/colortape",
   "scripts": {
