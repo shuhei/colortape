@@ -1,4 +1,4 @@
-colortape
+# colortape
 
 Colorize test results of [tape](https://github.com/substack/tape).
 
