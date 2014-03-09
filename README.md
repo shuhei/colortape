@@ -1,6 +1,6 @@
 # colortape
 
-Colorize test results of [tape](https://github.com/substack/tape).
+Colorize test results of [tape](https://github.com/substack/tape)/[node-tape](https://github.com/isaacs/node-tap).
 
 [![NPM version](https://badge.fury.io/js/colortape.png)](http://badge.fury.io/js/colortape)
 
