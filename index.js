@@ -6,7 +6,7 @@ var cyan  = '\u001b[36m';
 var reset = '\u001b[0m';
 
 var okPattern = /^\s*ok \d+ .*$/gm;
-var notOkPattern = /^\s*not ok \d .*$/gm;
+var notOkPattern = /^\s*not ok \d+ .*$/gm;
 var titlePattern = /^\s*# .*$/gm;
 
 var makeGreen = green + '$&' + reset;
