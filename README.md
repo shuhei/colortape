@@ -10,7 +10,25 @@ Colorize test results of [tape](https://github.com/substack/tape)/[node-tape](ht
 npm install -g colortape
 ```
 
+To use with `npm test`, install locally.
+
+```sh
+npm install -save-dev colortape
+```
+
 ## Usage
+
+### Wrapper command (recommended)
+
+Use `colortape` command instead of `tape` command.
+
+```sh
+colortape test/foo.js
+```
+
+This usage is recommended because it exits with the same exit code as `tape` command.
+
+### Pipe
 
 Pipe the result of `tape` command.
 
@@ -18,18 +36,4 @@ Pipe the result of `tape` command.
 tape test/foo.js | colortape
 ```
 
-To use with `npm test`, install locally
-
-```sh
-npm install -save-dev colortape
-```
-
-and configure your `package.json`.
-
-```json
-{
-  "scripts": {
-    "test": "tape test/**/*.js | colortape"
-  }
-}
-```
+This usage is not recommended because it exits with 0 even when `tape` command throws an error. This is inevitable due to the limitation of pipe.

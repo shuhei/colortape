@@ -22,7 +22,8 @@
   },
   "author": "Shuhei Kagawa <shuhei.kagawa@gmail.com>",
   "license": "BSD",
-  "devDependencies": {
+  "dependencies": {
+    "glob": "^4.3.1",
     "tape": "^3.0.3"
   }
 }

@@ -1,12 +1,37 @@
 #!/usr/bin/env node
 
+var path = require('path');
+var glob = require('glob');
+var test = require('tape');
 var colorTape = require('../');
 var colorStream = colorTape();
 
-process.on('exit', function(code) {
-  if (colorStream.failed) {
-    process.exit(1);
-  }
-});
+var args = process.argv.slice(2);
 
-process.stdin.pipe(colorStream).pipe(process.stdout);
+if (args.length > 0) {
+  wrap();
+} else {
+  pipe();
+}
+
+function wrap() {
+  test.createStream().pipe(colorStream).pipe(process.stdout);
+
+  args.forEach(function(arg) {
+    glob(arg, function(err, files) {
+      files.forEach(function(file) {
+        require(path.resolve(process.cwd(), file));
+      });
+    });
+  });
+}
+
+function pipe() {
+  process.stdin.pipe(colorStream).pipe(process.stdout);
+
+  process.on('exit', function(code) {
+    if (colorStream.failed) {
+      process.exit(1);
+    }
+  });
+}
