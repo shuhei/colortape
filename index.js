@@ -15,12 +15,16 @@ var makeCyan = cyan + '$&' + reset;
 
 function colorTape() {
   var transform = new Transform();
+  transform.failed = false;
   transform._transform = function (chunk, enc, callback) {
     if (chunk === null) {
       return callback();
     }
     chunk = chunk.toString();
     chunk = chunk.replace(okPattern, makeGreen);
+    if (chunk.match(notOkPattern)) {
+      transform.failed = true;
+    }
     chunk = chunk.replace(notOkPattern, makeRed);
     chunk = chunk.replace(titlePattern, makeCyan);
     this.push(new Buffer(chunk));

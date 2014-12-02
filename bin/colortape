@@ -1,5 +1,12 @@
 #!/usr/bin/env node
 
 var colorTape = require('../');
+var colorStream = colorTape();
 
-process.stdin.pipe(colorTape()).pipe(process.stdout);
+process.on('exit', function(code) {
+  if (colorStream.failed) {
+    process.exit(1);
+  }
+});
+
+process.stdin.pipe(colorStream).pipe(process.stdout);

@@ -5,7 +5,7 @@
   "main": "index.js",
   "bin": "bin/colortape",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test"
   },
   "keywords": [
     "test",
@@ -21,5 +21,8 @@
     "url": "https://github.com/shuhei/colortape/issues"
   },
   "author": "Shuhei Kagawa <shuhei.kagawa@gmail.com>",
-  "license": "BSD"
+  "license": "BSD",
+  "devDependencies": {
+    "tape": "^3.0.3"
+  }
 }
