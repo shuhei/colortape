@@ -2,7 +2,9 @@
 
 Colorize test results of [tape](https://github.com/substack/tape)/[node-tape](https://github.com/isaacs/node-tap).
 
-[![NPM version](https://badge.fury.io/js/colortape.png)](http://badge.fury.io/js/colortape)
+[![Travis build status](https://img.shields.io/travis/shuhei/colortape.svg)](https://travis-ci.org/shuhei/colortape)
+[![NPM version](https://img.shields.io/npm/v/colortape.svg)](https://www.npmjs.com/package/colortape)
+[![NPM downloads](https://img.shields.io/npm/dm/colortape.svg)](https://www.npmjs.com/package/colortape)
 
 ## Installation
 
