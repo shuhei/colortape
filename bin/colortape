@@ -3,8 +3,8 @@
 var path = require('path');
 var glob = require('glob');
 var test = require('tape');
-var colorTape = require('../');
-var colorStream = colorTape();
+var ColorTape = require('..');
+var colorStream = new ColorTape();
 
 var args = process.argv.slice(2);
 
@@ -30,7 +30,7 @@ function pipe() {
   process.stdin.pipe(colorStream).pipe(process.stdout);
 
   process.on('exit', function(code) {
-    if (colorStream.failed) {
+    if (colorStream._failed) {
       process.exit(1);
     }
   });

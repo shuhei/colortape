@@ -13,20 +13,20 @@ test('wrap: exit code 0 when success', function(t) {
   });
 });
 
-test('wrap: exit code 1 when failure', function(t) {
+test('wrap: exit code non-zero when failure', function(t) {
   t.plan(1);
   var fixturePath = path.resolve('test', 'fixtures', 'failure.js');
   var child = exec(['node', bin, fixturePath].join(' '));
   child.on('exit', function(code) {
-    t.equal(code, 1);
+    t.notEqual(code, 0);
   });
 });
 
-test('wrap: exit code 7 when error', function(t) {
+test('wrap: exit code non-zero when error', function(t) {
   t.plan(1);
   var fixturePath = path.resolve('test', 'fixtures', 'error.js');
   var child = exec(['node', bin, fixturePath].join(' '));
   child.on('exit', function(code) {
-    t.equal(code, 7);
+    t.notEqual(code, 0);
   });
 });
