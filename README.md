@@ -1,6 +1,6 @@
 # colortape
 
-Colorize test results of [tape](https://github.com/substack/tape)/[node-tape](https://github.com/isaacs/node-tap).
+Colorize test results of [tape](https://github.com/substack/tape)/[node-tap](https://github.com/isaacs/node-tap).
 
 [![Travis build status](https://img.shields.io/travis/shuhei/colortape.svg)](https://travis-ci.org/shuhei/colortape)
 [![NPM version](https://img.shields.io/npm/v/colortape.svg)](https://www.npmjs.com/package/colortape)
