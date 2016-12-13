@@ -42,8 +42,8 @@ test('wrap: exit code non-zero when error', function(t) {
 
 function printOutput(result) {
   console.log('----stdout----');
-  console.log(result.stdout);
+  console.log(result.stdout.toString());
   console.log('----stderr----');
-  console.log(result.stderr);
+  console.log(result.stderr.toString());
   console.log('--------------');
 }
