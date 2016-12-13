@@ -2,7 +2,10 @@
 
 var path = require('path');
 var glob = require('glob');
-var test = require('tape');
+// To require the same tape module that is used by test files.
+var resolve = require('resolve');
+var tapePath = resolve.sync('tape', { basedir: process.cwd() });
+var test = require(tapePath);
 var ColorTape = require('..');
 var colorStream = new ColorTape();
 
