@@ -21,7 +21,7 @@
     "url": "https://github.com/shuhei/colortape/issues"
   },
   "author": "Shuhei Kagawa <shuhei.kagawa@gmail.com>",
-  "license": "BSD",
+  "license": "BSD-2-Clause",
   "dependencies": {
     "glob": "^7.1.1",
     "resolve": "^1.1.7",
